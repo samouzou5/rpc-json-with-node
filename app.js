@@ -1,5 +1,5 @@
 const express = require('express');
-var cors = require('cors')
+const cors = require('cors');
 const jsonRpcRouter = require('express-json-rpc-router');
 
 const app = express();
