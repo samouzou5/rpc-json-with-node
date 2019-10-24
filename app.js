@@ -1,4 +1,5 @@
 const express = require('express');
+var cors = require('cors')
 const jsonRpcRouter = require('express-json-rpc-router');
 
 const app = express();
@@ -39,6 +40,7 @@ const controller = {
     }
 };
 
+app.use(cors());
 app.use('/rpc', jsonRpcRouter({methods: controller}));
 app.listen(1234, () => console.log('Example app listening on port 1234'));
 
